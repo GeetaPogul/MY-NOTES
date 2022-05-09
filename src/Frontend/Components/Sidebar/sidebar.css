@@ -1,0 +1,17 @@
+body{
+    font-size: 3rem;
+}
+.side-bar-container{
+  /* background-color: orange; */
+  margin-top: 4rem;
+  width: max-content;
+  display: block;
+}
+.side-links{
+    text-decoration: none;
+    display: block;
+    margin-top: 3rem;
+    padding:1.2rem 3.5rem;
+    border-radius: 3px;
+}
+

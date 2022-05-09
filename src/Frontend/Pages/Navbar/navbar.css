@@ -1,0 +1,56 @@
+@import url("../root.css");
+html {
+  font-size: 10px;
+}
+body {
+  background-color: var(--secondary-color);
+  padding: 0;
+  margin: 0;
+}
+
+.dark-mode {
+  background-color: rgb(52, 50, 50);
+  color: var(--secondary-color);
+}
+.navigation-bar {
+  background-color: var(--primary-color);
+  /* color: #f0ece3; */
+  font-size: 2rem;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.links {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+.logo-text {
+  font-size: 3.5rem;
+}
+
+.icon {
+  color: var(--secondary-color);
+}
+
+.login-text {
+  margin-right: 4rem;
+  font-size: 2.5rem;
+}
+
+.btn {
+  border-style: none;
+  background-color: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.toggle-btn {
+  margin-right: 3rem;
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+@media only screen and (max-width:500px) {
+  .logo-text{
+    font-size: 2.5rem;
+  }
+}

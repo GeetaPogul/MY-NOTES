@@ -1,0 +1,10 @@
+.wrapper{
+    display: flex;
+    /* background-color: violet; */
+  }
+  .sidebar-content{
+    /* background-color: blueviolet; */
+    max-width: 100rem;
+    /* display: flex; */
+    
+  }

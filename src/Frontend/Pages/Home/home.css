@@ -1,0 +1,81 @@
+@import url(../root.css);
+html {
+  font-size: 10px;
+}
+body {
+  box-sizing: border-box;
+  font-family: "Baloo 2", cursive;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+}
+.heading {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.sub-content {
+  font-size: 3rem;
+}
+
+.text-container {
+  max-width: 60vw;
+}
+
+.banner-img {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+}
+
+.btns{
+    border-style: none;
+    font-size: 1.9rem;
+    border-radius: 4px;
+    padding: 1.6rem 2.5rem;   
+}
+.btn-primary{
+    background-color: var(--primary-color);
+    color: var(--secondary-color); 
+    justify-content: right;
+}
+
+.btn-primary:hover{
+    background-color: var(--secondary-color); 
+    color: var(--primary-color);
+    /* font-weight: bold; */
+    border: 1.5px solid var(--primary-color);
+}
+
+.btn-box{
+    display: flex;
+    justify-content: right;
+    margin-right: 15%;
+}
+
+@media all and (max-width: 800px) {
+  .banner-img {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .banner-img {
+    width: 100%;
+  }
+  .text-container {
+    max-width: 100%;
+  }
+  .sub-content{
+    font-size:2rem;
+    padding: 1rem;
+  }
+}
