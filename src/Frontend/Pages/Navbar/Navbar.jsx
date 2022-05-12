@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, Navigate } from "react-router-dom";
 import Home from "../Home/Home";
 import Login from "../Login/Login";
 
@@ -7,13 +7,15 @@ import LabelsPage from "../LabelsPage/Labels";
 import ArchivePage from "../ArchivePage/ArchivePage";
 import TrashPage from "../TrashPage/TrashPage";
 import SignUp from "../SignUp/SignUp";
-
 import "../Navbar/navbar.css";
 import NotesPage from "../NotesPage/Notes";
-import { useAuth } from "../../contexts/AuthContext";
-const Navbar = () => {
 
-  const {auth} = useAuth();
+import Mockman from "mockman-js";
+
+import { useAuth } from "../../contexts/AuthContext";
+import { ProtectedRoute } from "../../ProtectedRoute/ProtectedRoute";
+const Navbar = () => {
+  const { auth } = useAuth();
   const toggleHandler = () => {
     var element = document.body;
     element.classList.toggle("dark-mode");
@@ -40,12 +42,48 @@ const Navbar = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/notes" element={<NotesPage />} />
-        <Route path="/labels" element={<LabelsPage />} />
-        <Route path="/archive" element={<ArchivePage />} />
-        <Route path="/trash" element={<TrashPage />} />
+        <Route path="/mock" element={<Mockman />} />
+        {!auth.status && (
+          <>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+          </>
+        )}
+
+        <Route
+          path="/notes"
+          element={
+            <ProtectedRoute>
+              <NotesPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/labels"
+          element={
+            <ProtectedRoute>
+              <LabelsPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/archive"
+          element={
+            <ProtectedRoute>
+              <ArchivePage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/trash"
+          element={
+            <ProtectedRoute>
+              <TrashPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>
     </div>
   );

@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../Home/home.css";
 import Footer from "../../Components/Footer/Footer";
-// import Sidebar from "../../Components/Sidebar/Sidebar";
-// import Notes from "../NotesPage/Notes";
+import { useAuth } from "../../contexts/AuthContext";
 
 const Home = () => {
+
+  const {auth} = useAuth();
   return (
     <div>
      
@@ -20,8 +21,20 @@ const Home = () => {
             
           </p> 
           <div className="btn-box">
-          <Link to="/notes">
-          <button className="btns btn-primary">Take a note</button></Link>
+
+            {auth.status ? (
+            <Link to="/notes"
+            >
+               <button className="btns btn-primary"> Take Note</button>
+                </Link>
+                ) : (
+                  <>
+              <Link to="/login"> <button className="btns btn-primary"> Join Now </button> </Link>
+              
+              </>
+            )}
+          {/* <Link to="/notes">
+          <button className="btns btn-primary">Take a note</button></Link> */}
           </div>
         </div>
 

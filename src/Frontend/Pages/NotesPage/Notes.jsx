@@ -26,7 +26,8 @@ function NotesPage() {
                 {noteList.map((note, i) => {
                   return (
                     note.notePinned &&
-                    !note.noteInTrash && <SingleNote key={i} note={note} />
+                    !note.noteInTrash && 
+                    <SingleNote key={i} note={note} />
                   );
                 })}
               </MasonryLayout>

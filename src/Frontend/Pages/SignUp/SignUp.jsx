@@ -1,36 +1,72 @@
 import React,{useState} from "react";
+import {useNavigate} from "react-router-dom";
 import { Link } from "react-router-dom";
 
+import {signupHandler} from "../../services/exportService"
+import { useAuth } from "../../contexts/AuthContext";
+
+
 const SignUp = () => {
-  const [newPassword, setNewPassword] = useState("");
+  // const [newPassword, setNewPassword] = useState("");
 
-  const [confirmPassword, setConfirmPassword] = useState("");
+  // const [confirmPassword, setConfirmPassword] = useState("");
 
-  const [disableButton, setDisableButton] = useState(true);
+  // const [disableButton, setDisableButton] = useState(true);
 
-  const newPasswordHandler = (event) => {
-    const password = event.target.value;
-    checkPassword(password, confirmPassword);
-    setNewPassword(password);
-  };
+  // const newPasswordHandler = (event) => {
+  //   const password = event.target.value;
+  //   checkPassword(password, confirmPassword);
+  //   setNewPassword(password);
+  // };
 
-  const confirmPasswordHandler = (event) => {
-    const confirmPassword = event.target.value;
-    checkPassword(confirmPassword, newPassword);
-    setConfirmPassword(confirmPassword);
-  };
+  // const confirmPasswordHandler = (event) => {
+  //   const confirmPassword = event.target.value;
+  //   checkPassword(confirmPassword, newPassword);
+  //   setConfirmPassword(confirmPassword);
+  // };
 
-  function checkPassword(password1, password2) {
-    password1 === password2 && password1 !== "" && password2 !== ""
-      ? setDisableButton(false)
-      : setDisableButton(true);
+  // function checkPassword(password1, password2) {
+  //   password1 === password2 && password1 !== "" && password2 !== ""
+  //     ? setDisableButton(false)
+  //     : setDisableButton(true);
+  // }
+
+
+  const navigate = useNavigate();
+  const {setAuth} = useAuth();
+  const [userSignup, setUserSignup] = useState({
+    firstName:"",
+    lastName:"",
+    email:"",
+    password:"",
+    confirmPassword:"",
+  })
+
+  const handleSignup = async (userSignup) => {
+    const data = await signupHandler(userSignup);
+
+    setAuth((auth) => ({
+      ...auth,
+      user : data.createdUser.firstName,
+      status: true,
+      authToken: data.encodedToken,
+
+    }));
+
+    localStorage.setItem("user", data.createdUser.firstName);
+    localStorage.setItem("authToken", data.encodedToken);
+    navigate("/notes");
   }
 
   return (
     <>
       <h4></h4>
       <div className="form-container">
-        <form className="">
+        <form className="" onSubmit={(event) =>{  event.preventDefault();
+        handleSignup(userSignup);
+
+        }
+        }>
           <div className="user-input">
             <label htmlFor="user-name">
               First Name <span>*</span>
@@ -42,6 +78,10 @@ const SignUp = () => {
               required
               autoComplete="off"
               placeholder=" John"
+              onChange={(event) => 
+              setUserSignup((user) => ({
+                ...user,firstName: event.target.value
+              }))}
             />
           </div>
           <div className="user-input">
@@ -55,6 +95,10 @@ const SignUp = () => {
               required
               autoComplete="off"
               placeholder=" Doe"
+              onChange={(event) => 
+                setUserSignup((user) => ({
+                  ...user,lastName: event.target.value
+                }))}
             />
           </div>
           <div className="user-input">
@@ -68,6 +112,10 @@ const SignUp = () => {
               required
               autoComplete="off"
               placeholder=" johndoe@gmail.com"
+              onChange={(event) => 
+                setUserSignup((user) => ({
+                  ...user,email: event.target.value
+                }))}
             />
           </div>
           <div className="user-input">
@@ -78,10 +126,14 @@ const SignUp = () => {
             <input
               type="password"
               id="password"
-              onChange={newPasswordHandler}
+              // onChange={newPasswordHandler}
               required
               autoComplete="off"
               placeholder=" ********"
+              onChange={(event) => 
+                setUserSignup((user) => ({
+                  ...user,password: event.target.value
+                }))}
             />
             <br />
           </div>
@@ -93,15 +145,19 @@ const SignUp = () => {
             <input
               type="password"
               id="confirmpassword"
-              onChange={confirmPasswordHandler}
+              // onChange={confirmPasswordHandler}
               required
               autoComplete="off"
               placeholder=" ********"
+              onChange={(event) => 
+                setUserSignup((user) => ({
+                  ...user,confirmpassword: event.target.value
+                }))}
             />
             <br /> <br />
           </div>
-          <button className="login-btn-bar" disabled={disableButton}>
-            Login
+          <button className="login-btn-bar" type="submit">
+            Create New Account
           </button>
           <br />
           <br />

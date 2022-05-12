@@ -5,8 +5,7 @@ const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState({
     user: localStorage.getItem("user"),
-    status: localStorage.getItem("authToken") 
-    ? true : false,
+    status: localStorage.getItem("authToken") ? true : false,
 
     authToken: localStorage.getItem("authToken"),
   });

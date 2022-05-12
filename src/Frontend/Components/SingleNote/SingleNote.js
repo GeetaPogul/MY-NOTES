@@ -19,7 +19,7 @@ const SingleNote = ({ note }) => {
   const [updatedNote, setUpdatedNote] = useState(note);
 
   return (
-    <>
+    <div className="container">
       <div className={`note ${noteColor}`}>
         {isModal && (
           <Modal
@@ -77,7 +77,7 @@ const SingleNote = ({ note }) => {
           </span>
 
           <span
-            className="material-icon edit-note"
+            className="material-icons edit-note"
             onCLick={() => setIsModal((modal) => !modal)}
           >
             edit
@@ -109,7 +109,7 @@ const SingleNote = ({ note }) => {
           </span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -106,7 +106,7 @@ const CreateNote = () => {
             <button
               className="ct-btn add-note"
               onClick={() => {
-                addNoteHandler();
+                addNoteHandler(auth.authToken);
               }}
             >
               Add

@@ -1,9 +1,27 @@
 .note {
   max-width: 100%;
-  min-width: 150px;
-  border: red;
+  min-width: 250px;
+  /* border: red; */
+  /* gap: 1rem; */
+  background-color: aquamarine;
+  border: 1px solid blue;
   border-radius: 7px;
-  padding: 0.5rem;
+  padding: 0rem 1rem;
+  margin-left: 10rem;
+  /* margin: 2rem; */
+}
+.container{
+  /* background-color: brown; */
+}
+.note-body{
+ 
+  background-color: pink;
+   /* max-width:35rem; */
+  font-size: 2rem;
+}
+.note-time{
+  color: red;
+
 }
 
 .note > h3 {
