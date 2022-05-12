@@ -1,8 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Login/login.css";
+import {loginHandler} from "../../services/AuthServices/loginService"
 
+import { useAuth } from "../../contexts/AuthContext";
 const Login = () => {
+
+ 
+
   return (
     <div>
       <h2></h2> <br/>

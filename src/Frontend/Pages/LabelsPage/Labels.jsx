@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 
-const Labels = () => {
+const LabelsPage = () => {
   return (
     <>
       <div className="wrapper">
@@ -9,11 +9,11 @@ const Labels = () => {
         <Sidebar />
         </div>
         <div className="sidebar-content">
-        <h3>Labels Page</h3>
+        <h3>LabelsPage Page</h3>
         </div>
       </div>
     </>
   );
 };
 
-export default Labels;
+export default LabelsPage;

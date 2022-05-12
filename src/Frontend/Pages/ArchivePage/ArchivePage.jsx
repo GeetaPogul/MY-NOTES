@@ -1,5 +1,8 @@
 import React from "react";
 import Sidebar from "../../Components/Sidebar/Sidebar";
+import { useNote } from "../../contexts/NoteContext";
+import { useAuth } from "../../contexts/AuthContext";
+
 
 const ArchivePage = () => {
   return (

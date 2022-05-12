@@ -7,4 +7,32 @@
     max-width: 100rem;
     /* display: flex; */
     
+
+  }
+
+  .notes-container{
+    min-height: 100vh;
+    flex-basis: 100%;
+  }
+
+  .margin-left-20{
+    margin-left: 13rem;
+  }
+
+  .notes-render-div{
+    width:90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+  }
+
+  .notes-render-div >h3 {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  @media only screen and (max-width : 750px){
+    .notes-render-div{
+      margin-top: 3rem;
+    }
   }

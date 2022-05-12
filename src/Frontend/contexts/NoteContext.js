@@ -88,7 +88,7 @@ const NoteProvider = ({ children }) => {
 const useNote = () => {
   const context = useContext(NoteContext);
 
-  if (context === undefined) throw new Error("Error : from note context");
+  // if (context === undefined) throw new Error("Error : from note context");
 
   return context;
 };

@@ -1,0 +1,97 @@
+.create-note-container {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.note-section {
+  position: relative;
+  border: 13px green;
+  border-radius: 5px;
+}
+
+.note-title {
+  position: absolute;
+  top: 2px;
+  width: 80%;
+  font-size: 1.5rem;
+  padding: 0.4rem;
+  margin: 5px 7xp;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: blue;
+}
+
+/* LABEL OUTPUT DIV*/
+
+.label-render-div {
+  width: 80%;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  pad: 0 5px;
+  border: 1px solid blue;
+  border-radius: 5px;
+  gap: 5px;
+}
+
+.label-delete {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* BOTTOM PALLETS STYLE Below  */
+.bottom-toolbar {
+  padding: 0.5rem 0;
+  margin: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.add-note.ct-btn {
+  background-color: var(--color-primary);
+  color: var(--gray-100);
+  font-size: 1.2rem;
+}
+
+.close-note {
+  background-color: var(--red-500);
+  color: var(--gray-100);
+}
+.pin-note {
+  font-size: 1.8rem;
+}
+.toolbar-tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.toolbar-tools > * {
+  cursor: pointer;
+}
+/* MEDIA QUERIES  */
+@media only screen and (max-width: 750px) {
+  .note-title {
+    top: -4px;
+  }
+
+  .react-quill > .ql-snow.ql-container {
+    margin: 0;
+  }
+
+  .ql-snow.ql-toolbar {
+    margin-top: 2.8rem;
+  }
+}

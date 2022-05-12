@@ -2,14 +2,18 @@ import React from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import Home from "../Home/Home";
 import Login from "../Login/Login";
-import Notes from "../NotesPage/Notes";
-import Labels from "../LabelsPage/Labels";
+
+import LabelsPage from "../LabelsPage/Labels";
 import ArchivePage from "../ArchivePage/ArchivePage";
 import TrashPage from "../TrashPage/TrashPage";
 import SignUp from "../SignUp/SignUp";
 
 import "../Navbar/navbar.css";
+import NotesPage from "../NotesPage/Notes";
+import { useAuth } from "../../contexts/AuthContext";
 const Navbar = () => {
+
+  const {auth} = useAuth();
   const toggleHandler = () => {
     var element = document.body;
     element.classList.toggle("dark-mode");
@@ -38,12 +42,10 @@ const Navbar = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/notes" element={<Notes />} />
-        <Route path="/labels" element={<Labels />} />
+        <Route path="/notes" element={<NotesPage />} />
+        <Route path="/labels" element={<LabelsPage />} />
         <Route path="/archive" element={<ArchivePage />} />
         <Route path="/trash" element={<TrashPage />} />
-        
-
       </Routes>
     </div>
   );

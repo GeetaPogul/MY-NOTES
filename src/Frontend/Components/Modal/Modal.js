@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./modal.css";
 import { Label } from "../Label/Label";
 import { Pallete } from "../Pallete/Pallete";
-import ReactQuillEditor from "../ReactQuill/ReactQuillEditor";
+import {ReactQuillEditor} from "../ReactQuill/ReactQuillEditor";
 
 import { useAuth } from "../../contexts/AuthContext";
 import { useNote } from "../../contexts/NoteContext";
