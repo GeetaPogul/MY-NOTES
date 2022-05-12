@@ -1,0 +1,55 @@
+.color-pallete-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pallete-icon {
+  font-size: 1.8rem;
+}
+
+.color-pallete {
+  display: flex;
+  gap: 0.4rem;
+  padding: 5px;
+  position: absolute;
+  top: 2rem;
+  border: 1px solid red;
+  border-radius: 5px;
+  background-color: pink;
+}
+
+.pallete-hide {
+  display: none;
+}
+
+.color {
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.default {
+  background-color: pink;
+  color: green;
+}
+
+.red {
+  background-color: red;
+  color: green;
+}
+
+.voilet {
+  background-color: violet;
+}
+
+.blue {
+  background-color: blue;
+  color: green;
+}
+
+.yellow {
+  background-color: yellow;
+  color: white;
+}
