@@ -6,17 +6,18 @@ import "./note.css";
 import { useAuth } from "../../contexts/AuthContext";
 
 const SingleNote = ({ note }) => {
-  const {  updateNoteHandler, addNoteToArchiveHandler  } = useNote();
+  const { updateNoteHandler, addNoteToArchiveHandler } = useNote();
 
   const {
     auth: { authToken },
   } = useAuth();
 
-  const { noteTitle, noteDesc, notePinned, noteColor, tags, _id, createdAt } = note;
+  const { noteTitle, noteDesc, notePinned, noteColor, tags, _id, createdAt } =
+    note;
 
   const [isModal, setIsModal] = useState(false);
 
-  const [updatedNote, setUpdatedNote] = useState(note);
+  const [updatedNote,setUpdatedNote]=useState(note);
 
   return (
     <div className="container">
@@ -61,7 +62,7 @@ const SingleNote = ({ note }) => {
                 ? "material-icons pin-note"
                 : "material-icons-outlined pin-note"
             }
-            onCLick={() => {
+            onClick={() => {
               updateNoteHandler(
                 _id,
                 {
@@ -78,7 +79,7 @@ const SingleNote = ({ note }) => {
 
           <span
             className="material-icons edit-note"
-            onCLick={() => setIsModal((modal) => !modal)}
+            onClick={() => setIsModal((modal) => !modal)}
           >
             edit
           </span>

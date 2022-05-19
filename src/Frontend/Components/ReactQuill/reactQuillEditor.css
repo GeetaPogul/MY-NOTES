@@ -1,3 +1,12 @@
+.react-quill{
+  max-width: 450px;
+  line-height: 5rem;
+  color: black;
+  /* background-color: aqua; */
+  border-style: none;
+
+}
+
 /* REACT QUILL STYLES BELOW 
 .react-quill {
   max-width: 450px;

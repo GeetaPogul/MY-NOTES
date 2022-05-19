@@ -8,7 +8,7 @@ import "./createNote.css";
 import { useAuth } from "../../contexts/AuthContext";
 import { addNoteService } from "../../services/exportService";
 
-import "./createNote.css"
+// import "./createNote.css"
 
 const CreateNote = () => {
   const {auth} = useAuth();
@@ -29,7 +29,6 @@ const CreateNote = () => {
       noteDesc: tempNote.noteDesc,
       createdAt: new Date(),
     });
-
     setNoteList(notes);
     dispatchNotes({ type: "CLEAR-FIELDS" });
     setTempNote("");
@@ -59,9 +58,10 @@ const CreateNote = () => {
               {tags.map((tag, index) => {
                 return (
                   <div key={index} className="label">
+                    <span className="label-content"> {tag} </span>
                     <span
                       className="material-icons label-delete"
-                      onClick={() => ({ type: "REMOVE-TAG", payload: tag })}
+                      onClick={() => dispatchNotes({ type: "REMOVE-TAG", payload: tag })}
                     >
                       close
                     </span>
@@ -77,7 +77,7 @@ const CreateNote = () => {
                 className={
                   notePinned
                     ? "material-icons pin-note"
-                    : "material-icons-outlined pin-note"
+                    : "material-icons-outlined pin-note pinned"
                 }
                 onClick={() => {
                   dispatchNotes({
@@ -104,7 +104,7 @@ const CreateNote = () => {
             </div>
 
             <button
-              className="ct-btn add-note"
+              className="ct-btn add-note btns"
               onClick={() => {
                 addNoteHandler(auth.authToken);
               }}

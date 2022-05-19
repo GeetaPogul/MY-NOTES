@@ -36,31 +36,34 @@ body {
   margin-top: 5rem;
 }
 
-.btns{
-    border-style: none;
-    font-size: 1.9rem;
-    border-radius: 4px;
-    padding: 1.6rem 2.5rem;   
+.btns {
+  border-style: none;
+  font-size: 2rem;
+  border-radius: 4px;
+  padding: 1.6rem 2.5rem;
+  cursor: pointer;
 }
-.btn-primary{
-    background-color: var(--primary-color);
-    color: var(--secondary-color); 
-    justify-content: right;
-}
-
-.btn-primary:hover{
-    background-color: var(--secondary-color); 
-    color: var(--primary-color);
-    /* font-weight: bold; */
-    border: 1.5px solid var(--primary-color);
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  justify-content: right;
 }
 
-.btn-box{
-    display: flex;
-    justify-content: right;
-    margin-right: 15%;
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  /* font-weight: bold; */
+  border: 1.5px solid var(--primary-color);
 }
 
+.btn-box {
+  display: flex;
+  justify-content: right;
+  margin-right: 15%;
+}
+.m {
+  margin-top: 10rem;
+}
 @media all and (max-width: 800px) {
   .banner-img {
     width: 100%;
@@ -74,8 +77,8 @@ body {
   .text-container {
     max-width: 100%;
   }
-  .sub-content{
-    font-size:2rem;
+  .sub-content {
+    font-size: 2rem;
     padding: 1rem;
   }
 }

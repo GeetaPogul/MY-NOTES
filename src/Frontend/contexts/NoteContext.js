@@ -54,8 +54,9 @@ const NoteProvider = ({ children }) => {
   // restore note from Archive
 
   const restoreFromArchiveHandler = async (id, authToken) => {
-    const response = await deleteFromArchiveService(id, authToken);
-    setNoteList(response);
+    const response = await restoreFromArchiveService(id, authToken);
+    setArchiveList(response.archives);
+    setNoteList(response.notes);
   };
 
   // direct delete from archive
@@ -88,7 +89,7 @@ const NoteProvider = ({ children }) => {
 const useNote = () => {
   const context = useContext(NoteContext);
 
-  // if (context === undefined) throw new Error("Error : from note context");
+  if (context === undefined) throw new Error("Error : from note context");
 
   return context;
 };

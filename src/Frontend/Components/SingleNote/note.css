@@ -1,27 +1,29 @@
 .note {
-  max-width: 100%;
-  min-width: 250px;
+  /* max-width: 100%; */
+  min-width: 150px;
   /* border: red; */
-  /* gap: 1rem; */
-  background-color: aquamarine;
-  border: 1px solid blue;
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: aquamarine; */
+  border: 1px solid black;
   border-radius: 7px;
   padding: 0rem 1rem;
-  margin-left: 10rem;
-  /* margin: 2rem; */
+  
 }
-.container{
-  /* background-color: brown; */
+
+.trash-page{
+   /* background-color: pink; */
+   width: 110rem;
+
 }
-.note-body{
- 
-  background-color: pink;
-   /* max-width:35rem; */
+.note-body {
+  
   font-size: 2rem;
 }
-.note-time{
-  color: red;
+.note-time {
 
+  font-size: 1.6rem;
 }
 
 .note > h3 {
@@ -50,6 +52,7 @@
   justify-content: start;
 }
 
+.pin-note,
 .delete-note,
 .edit-note {
   font-size: 1.8rem;

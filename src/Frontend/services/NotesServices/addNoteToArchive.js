@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const addNoteToArchiveService = async (is, note, authToken) => {
+const addNoteToArchiveService = async (id, note, authToken) => {
   try {
     const { data } = await axios.post(
       `/api/notes/archives/${id}`,
@@ -13,7 +13,7 @@ const addNoteToArchiveService = async (is, note, authToken) => {
     );
     return data;
   } catch (err) {
-    console.error(e);
+    console.error(err);
   }
 };
 

@@ -5,35 +5,34 @@ import Footer from "../../Components/Footer/Footer";
 import { useAuth } from "../../contexts/AuthContext";
 
 const Home = () => {
-
-  const {auth} = useAuth();
+  const { auth } = useAuth();
   return (
     <div>
-     
-
       <div className="container">
         <div className="text-container">
+       
           <p className="heading"> Quick Notes</p>
-          {/* <Sidebar /> */}
-          <p className="sub-content">
+          <br />
+          <span>
             You use Quick notes anytime, anywhere.This is digital noteboook that
             blends notes, and daily planner into one app.
-            
-          </p> 
+          </span>
+          <br />
           <div className="btn-box">
-
             {auth.status ? (
-            <Link to="/notes"
-            >
-               <button className="btns btn-primary"> Take Note</button>
+              <Link to="/notes">
+                <br />
+                <button className="btns btn-primary"> Take Note</button>
+              </Link>
+            ) : (
+              <>
+                <Link to="/login">
+                  <br />
+                  <button className="btns btn-primary"> Join Now </button>
                 </Link>
-                ) : (
-                  <>
-              <Link to="/login"> <button className="btns btn-primary"> Join Now </button> </Link>
-              
               </>
             )}
-          {/* <Link to="/notes">
+            {/* <Link to="/notes">
           <button className="btns btn-primary">Take a note</button></Link> */}
           </div>
         </div>
@@ -41,13 +40,12 @@ const Home = () => {
         <div className="img-container">
           <img className="banner-img" src="./home-image.png" alt="img" />
         </div>
+      </div> 
 
+     
 
-       
-      </div>
-
-      
-<Footer />
+      <Footer />
+      <div className="m"></div>
     </div>
   );
 };

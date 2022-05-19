@@ -7,29 +7,6 @@ import { useAuth } from "../../contexts/AuthContext";
 
 
 const SignUp = () => {
-  // const [newPassword, setNewPassword] = useState("");
-
-  // const [confirmPassword, setConfirmPassword] = useState("");
-
-  // const [disableButton, setDisableButton] = useState(true);
-
-  // const newPasswordHandler = (event) => {
-  //   const password = event.target.value;
-  //   checkPassword(password, confirmPassword);
-  //   setNewPassword(password);
-  // };
-
-  // const confirmPasswordHandler = (event) => {
-  //   const confirmPassword = event.target.value;
-  //   checkPassword(confirmPassword, newPassword);
-  //   setConfirmPassword(confirmPassword);
-  // };
-
-  // function checkPassword(password1, password2) {
-  //   password1 === password2 && password1 !== "" && password2 !== ""
-  //     ? setDisableButton(false)
-  //     : setDisableButton(true);
-  // }
 
 
   const navigate = useNavigate();
