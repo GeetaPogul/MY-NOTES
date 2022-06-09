@@ -8,12 +8,13 @@ const ReactQuillEditor = ({ value, setValue }) => {
     <ReactQuill
       value={value}
       onChange={(event) => {
-        setValue((value) => ({ ...value, noteDesc: event }));
+        setValue(
+          (value) => ({ ...value, noteDesc: event }));
       }}
       className="react-quill"
       modules={modules}
       formats={formats}
-      placeholder="Take a Note..."
+      placeholder="Take a Note here..."
       theme="snow"
     />
   );
@@ -23,7 +24,7 @@ export { ReactQuillEditor };
 
 const modules = {
   toolbar: [
-    [{ header: [1, 2,3,false] }],
+    [{ header: [1, 2,false] }],
     ["bold", "italic", "underline", "blockquote", "code"],
     [
       { list: "ordered" },

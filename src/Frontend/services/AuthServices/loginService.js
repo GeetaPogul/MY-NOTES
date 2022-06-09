@@ -1,5 +1,6 @@
 import axios from "axios";
 const loginHandler = async ({ email, password }) => {
+  console.log("email", email, password);
   try {
     const response = await axios.post("/api/auth/login", {
       email,

@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./modal.css";
 import { Label } from "../Label/Label";
 import { Pallete } from "../Pallete/Pallete";
-import ReactQuillEditor from "../ReactQuill/ReactQuillEditor";
+import {ReactQuillEditor} from "../ReactQuill/ReactQuillEditor";
 
 import { useAuth } from "../../contexts/AuthContext";
 import { useNote } from "../../contexts/NoteContext";
@@ -31,6 +31,7 @@ const Modal = ({
       <div className="update-note-container">
         <section className={`modal-section ${updatedNote.noteColor}`}>
           <ReactQuillEditor
+          className="modal-editior"
             value={updatedNote.noteDesc}
             setValue={setUpdatedNote}
           />
@@ -50,8 +51,9 @@ const Modal = ({
               {updatedNote.tags.map((tag, index) => {
                 return (
                   <div key={index} className="label">
+                    <span className="label-content"> {tag}</span>
                     <span
-                      className="material-icons label-delete"
+                      className="material-icons label-delete ct-btn"
                       onClick={() =>
                         setUpdatedNote({
                           ...updatedNote,
@@ -105,7 +107,7 @@ const Modal = ({
             </div>
 
             <button
-              className="ct-btn add-note"
+              className="ct-btn add-note btns btn-primary"
               onClick={() => {
                 updateNoteHandler(
                   _id,
@@ -122,7 +124,7 @@ const Modal = ({
             </button>
 
             <button
-              className="ct-btn add-note"
+              className="ct-btn add-note btns btn-primary"
               onClick={() => {
                 setIsModal(false);
               }}

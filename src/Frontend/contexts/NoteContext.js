@@ -54,8 +54,9 @@ const NoteProvider = ({ children }) => {
   // restore note from Archive
 
   const restoreFromArchiveHandler = async (id, authToken) => {
-    const response = await deleteFromArchiveService(id, authToken);
-    setNoteList(response);
+    const response = await restoreFromArchiveService(id, authToken);
+    setArchiveList(response.archives);
+    setNoteList(response.notes);
   };
 
   // direct delete from archive

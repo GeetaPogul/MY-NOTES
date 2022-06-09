@@ -6,22 +6,26 @@
   width: 100vw;
   height: 100%;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color:grey;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
+  
 }
+
 
 .modal-section {
   position: relative;
   max-width: max-content;
-  border-radius: 7px;
+  border-radius: 5px;
+  padding: .2rem;
+  border: 2px solid white;
 }
 
 .modal-title {
   position: absolute;
-  top: 62px;
+  top: -5px;
   width: 80%;
   font-size: 1.5rem;
   padding: 0.4rem;
@@ -29,7 +33,7 @@
   background-color: transparent;
   outline: none;
   border: none;
-  color: grey;
+  /* color: red; */
 }
 
 @media only screen and (max-width: 750px) {

@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const addNoteService = async (authToken, note) => {
+  console.log(note);
   try {
     const { data } = await axios.post(
       "/api/notes",

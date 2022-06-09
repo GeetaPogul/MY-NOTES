@@ -23,7 +23,6 @@ const useAuth = () => {
   if (context === undefined) {
     throw new Error("Auth context error");
   }
-
   return context;
 };
 

@@ -33,8 +33,10 @@ body {
 }
 
 .login-text {
-  margin-right: 4rem;
+  /* margin-right: 10rem; */
   font-size: 2.5rem;
+  /* position: relative; */
+  margin-bottom:3rem;
 }
 
 .btn {
@@ -46,11 +48,25 @@ body {
 
 .toggle-btn {
   margin-right: 3rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: var(--secondary-color);
 }
-@media only screen and (max-width:500px) {
-  .logo-text{
-    font-size: 2.5rem;
+
+.logout-btn {
+  /* color: red; */
+  margin-top: 1.5rem;
+  font-size: 3rem;
+}
+
+/* .right-side-navbar{
+  border: 1px solid red;
+} */
+@media only screen and (max-width: 500px) {
+  .logo-text {
+    font-size: 2rem;
+  }
+
+  .ion{
+    font-size: 1rem
   }
 }

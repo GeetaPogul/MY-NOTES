@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import "./label.css";
 
 const Label = ({
@@ -39,7 +38,7 @@ const Label = ({
         </span>
 
         <div className={isLabel ? "label-div" : "label-div label-hide"}>
-          <h3> Label Note</h3>
+          <p> Label Note</p>
           <div className="label-box">
             <input
               type="text"

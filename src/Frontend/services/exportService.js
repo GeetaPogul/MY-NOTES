@@ -1,6 +1,6 @@
 export { loginHandler } from "./AuthServices/loginService";
 
-export { signupService } from "./AuthServices/signupService";
+export { signupHandler} from "./AuthServices/signupService";
 
 export { addNoteService } from "./NotesServices/addNoteServices";
 

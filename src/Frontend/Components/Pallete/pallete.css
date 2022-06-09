@@ -6,7 +6,7 @@
 }
 
 .pallete-icon {
-  font-size: 1.8rem;
+  font-size: 3rem;
 }
 
 .color-pallete {
@@ -17,7 +17,7 @@
   top: 2rem;
   border: 1px solid red;
   border-radius: 5px;
-  background-color: pink;
+  background-color: var(--green-300);
 }
 
 .pallete-hide {
@@ -25,31 +25,40 @@
 }
 
 .color {
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 50%;
   cursor: pointer;
 }
 
+/* 
+--red-300: #fed7d7;
+--violet-300: #d8cffc;
+--yellow-300: #fff1ac;
+--cream-300 : #e8e3d6
+    --gray-300: #d1d5db;
+--gray-900: #1f2937; */
+
 .default {
-  background-color: pink;
-  color: green;
+  background-color: var(--cream-900);
+  color: black;
 }
 
 .red {
-  background-color: red;
-  color: green;
+  background-color: var(--red-300);
+  color: var(--grey-900);
 }
 
-.voilet {
-  background-color: violet;
+.violet {
+  background-color:var(--violet-300);
+  color:var(--grey-900);
 }
 
 .blue {
-  background-color: blue;
-  color: green;
+  background-color: var(--blue-300);
+  color:var(--grey-900);
 }
 
 .yellow {
-  background-color: yellow;
-  color: white;
+  background-color: var(--yellow-300);
+  color:var(--grey-900);
 }

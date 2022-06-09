@@ -25,7 +25,7 @@ const noteReducer = (state, action) => {
 
     case "ADD-TAG":
       if (action.payload === "" || state.tags.includes(action.payload)) {
-        alert("Tag is already theree");
+        alert("Tag is already there");
 
         return {
           ...state,
