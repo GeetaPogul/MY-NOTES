@@ -1,9 +1,9 @@
-
+import Navbar from "./Frontend/Pages/Navbar/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <h1>Notes App. </h1>
+      <Navbar />
     </div>
   );
 }
