@@ -1,0 +1,70 @@
+@import url(../root.css);
+html {
+  font-size: 10px;
+}
+
+.form-container {
+  margin: auto;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  width: max-content;
+  padding: 2.5rem;
+  line-height: 3.5rem;
+  border-radius: 0.5rem;
+}
+
+.user-input span {
+  color: var(--red-color);
+}
+
+.user-input input {
+  width: 40rem;
+  height: 3rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 3px;
+  padding-left: 1rem;
+  font-size: 1.8rem;
+}
+
+.login-btn-bar {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.8rem;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  height: 4rem;
+  width: 41rem;
+}
+
+.login-btn-bar:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.create-acc-link {
+  color: blue;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+.bottom-bar {
+  text-align: center;
+}
+
+/* ----------signup page ------------ */
+
+button[disabled] {
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width:500px){
+    .user-input input {
+        width: 30rem;
+        
+      }
+
+      .login-btn-bar {
+        
+        width: 31rem;
+      }
+}
